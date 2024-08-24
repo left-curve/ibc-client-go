@@ -3,9 +3,9 @@ package grug
 import "crypto/sha256"
 
 var (
-	HashPrefixInternalNode byte     = 0
-	HashPrefixLeafNode     byte     = 1
-	ZeroHash               [32]byte = [32]byte{}
+	HashPrefixInternalNode byte = 0
+	HashPrefixLeafNode     byte = 1
+	ZeroHash               Hash = Hash{}
 )
 
 // Node is a node is Grug's Merkle tree. It's an enum between either an internal

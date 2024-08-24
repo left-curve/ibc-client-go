@@ -110,7 +110,7 @@ func (cs ClientState) VerifyMembership(
 		)
 	}
 
-	return merkleProof.VerifyMembership(Hash(consensusState.GetRoot().GetHash()), doSha256(merklePath.Bytes), doSha256(value))
+	return merkleProof.VerifyMembership(Hash(consensusState.GetRoot().GetHash()), doSha256(merklePath), doSha256(value))
 }
 
 // VerifyNonMembership implements the ICS-02 `ClientState` interface.
@@ -163,7 +163,7 @@ func (cs ClientState) VerifyNonMembership(
 		)
 	}
 
-	return merkleProof.VerifyNonMembership(Hash(consensusState.GetRoot().GetHash()), doSha256(merklePath.Bytes))
+	return merkleProof.VerifyNonMembership(Hash(consensusState.GetRoot().GetHash()), doSha256(merklePath))
 }
 
 // verifyDelayPeriodPassed is copied without change from 07-tendermint.

@@ -6,11 +6,9 @@ import "github.com/cosmos/ibc-go/v8/modules/core/exported"
 var _ exported.Path = (*Path)(nil)
 
 // Path is the Merkle path for Grug proofs. It's basically just a byte array.
-type Path struct {
-	Bytes []byte
-}
+type Path []byte
 
 // Empty implements the `exported.Path` interface.
 func (path Path) Empty() bool {
-	return len(path.Bytes) == 0
+	return len(path) == 0
 }

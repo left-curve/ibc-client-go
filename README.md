@@ -1,3 +1,5 @@
+> This is a proof of concept, not intended for production use. For production, we plan to use either the standard [07-tendermint](https://github.com/cosmos/ibc-go/tree/main/modules/light-clients/07-tendermint) or [11-cometbls](https://github.com/unionlabs/union/tree/main/11-cometbls) client.
+
 # ibc-client-go
 
 Grug light client for Cosmos SDK chains, written in Go.
